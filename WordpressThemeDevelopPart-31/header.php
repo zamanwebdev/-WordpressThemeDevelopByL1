@@ -19,7 +19,8 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-            	<h2><marquee> Wishing All a very Happy New Year.</marquee></h2>
+                <!-- <h2><marquee><?php echo get_theme_mod('Offer_Notice'); ?></marquee></h2> -->
+            	<h2><?php echo get_theme_mod('Offer_Notice'); ?></h2>
             </div>
           </div>
         </div>
