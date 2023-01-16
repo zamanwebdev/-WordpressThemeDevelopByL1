@@ -15,8 +15,14 @@ function zaman_customizar_register($wp_customize){
       'setting' => 'Offer_Notice',
       'section' => 'Offer_Notice_Option',
     ));
-    
-    //Notice  Background Color
+
+    // Theme Color
+      $wp_customize-> add_section('zaman_colors', array(
+        'title' => __('Theme Color', 'syedzaman'),
+        'description' => 'If need you can change your theme color.',
+      ));
+
+     //Notice Background Color
       $wp_customize ->add_setting('notice_background_color', array(
         'default' => '#112442',
       ));
@@ -25,6 +31,29 @@ function zaman_customizar_register($wp_customize){
         'section' => 'zaman_colors',
         'settings' => 'notice_background_color',
       )));
+
+      //Header Background Color
+      $wp_customize ->add_setting('header_background', array(
+        'default' => '#1e73be',
+      ));
+      $wp_customize->add_control( new WP_Customize_color_control($wp_customize, 'header_background', array(
+        'label' => 'Header Background Color',
+        'section' => 'zaman_colors',
+        'settings' => 'header_background',
+      )));
+
+       //Body Background Color
+      $wp_customize ->add_setting('zaman_bg_color', array(
+        'default' => '#44ddaa',
+      ));
+      $wp_customize->add_control( new WP_Customize_color_control($wp_customize, 'zaman_bg_color', array(
+        'label' => 'Body Background Color',
+        'section' => 'zaman_colors',
+        'settings' => 'zaman_bg_color',
+      )));
+
+
+   
     //Header Area Function
     $wp_customize->add_section('zaman_header_area', array(
         'title' =>__('Header Area', 'syedzaman'),
@@ -89,29 +118,8 @@ function zaman_customizar_register($wp_customize){
       'section' => 'zaman_footer_option',
     ));
 
-    // Theme Color
-      $wp_customize-> add_section('zaman_colors', array(
-        'title' => __('Theme Color', 'syedzaman'),
-        'description' => 'If need you can change your theme color.',
-      ));
-
-      $wp_customize ->add_setting('zaman_bg_color', array(
-        'default' => '#ffffff',
-      ));
-      $wp_customize->add_control( new WP_Customize_color_control($wp_customize, 'zaman_bg_color', array(
-        'label' => 'Background Color',
-        'section' => 'zaman_colors',
-        'settings' => 'zaman_bg_color',
-      )));
-      //Header Background Color
-      $wp_customize ->add_setting('header_background', array(
-        'default' => '#fff',
-      ));
-      $wp_customize->add_control( new WP_Customize_color_control($wp_customize, 'header_background', array(
-        'label' => 'Header Background Color',
-        'section' => 'zaman_colors',
-        'settings' => 'header_background',
-      )));
+    
+      
       //Read More Button and Header Menu hove color
       $wp_customize ->add_setting('zaman_primary_color', array(
         'default' => '#ea1a70',

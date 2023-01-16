@@ -1,6 +1,21 @@
 <?php 
 
 function zaman_customizar_register($wp_customize){
+    //Offer and Notice Option in Header Area 
+    $wp_customize->add_section('Offer_Notice_Option', array(
+      'title' => __('Offer Notice Option', 'syedzaman'),
+      'description' => 'description of Offer Notice Option'
+    ));
+    $wp_customize->add_setting('Offer_Notice', array(
+      'default' => 'Offer or Notice Text Write Here',
+    ));
+    $wp_customize-> add_control('Offer_Notice', array(
+      'label' => 'Copyright Text',
+      'description' => 'If need you can update your copyright text from here',
+      'setting' => 'Offer_Notice',
+      'section' => 'Offer_Notice_Option',
+    ));
+    
     //Notice  Background Color
       $wp_customize ->add_setting('notice_background_color', array(
         'default' => '#112442',
@@ -44,6 +59,11 @@ function zaman_customizar_register($wp_customize){
           'center_menu' => 'Center Menu',
         ),
       ));
+    
+
+   
+   
+
     //Footer Option
     $wp_customize->add_section('zaman_footer_option', array(
       'title' => __('Footer Option', 'syedzaman'),

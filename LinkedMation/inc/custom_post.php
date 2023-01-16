@@ -1,17 +1,17 @@
 <?php
 
-function custom_slider(){
-  register_post_type ('slider',
+function custom_first_slider(){
+  register_post_type ('first_slider',
     array(
       'labels' => array(
-        'name' => ('Slider'),
-        'singular_name' => ('Slider'),
-        'add_new' => ('Add New Slider'),
-        'add_new_item' => ('Add New Slider'),
-        'edit_item' => ('Edit Slider'),
-        'new_item' => ('New Slider'),
-        'view_item' => ('View Slider'),
-        'not_found' => ('Sorry, we cound\'n find the Slider you are looking for.'),
+        'name' => ('First Slider'),
+        'singular_name' => ('First Slider'),
+        'add_new' => ('Add New First Slider'),
+        'add_new_item' => ('Add New First Slider'),
+        'edit_item' => ('Edit First Slider'),
+        'new_item' => ('New First Slider'),
+        'view_item' => ('View First Slider'),
+        'not_found' => ('Sorry, we cound\'n find the First Slider you are looking for.'),
       ),
       'menu_icon' => 'dashicons-format-gallery',
       'public' => true,
@@ -22,14 +22,45 @@ function custom_slider(){
       'hierarchial' => true,
       'show_ui' => true,
       'capability_type' => 'post',
-      'rewrite' => array('slag' => 'slider'),
+      'rewrite' => array('slag' => 'first_slider'),
       'supports' => array('title', 'thumbnail', 'editor', 'excerpt'),
       )
     );
     add_theme_support('post-thumbnails');
 }
 
-add_action('init', 'custom_slider');
+add_action('init', 'custom_first_slider');
+
+function custom_second_slider(){
+  register_post_type ('second_slider',
+    array(
+      'labels' => array(
+        'name' => ('Second Slider'),
+        'singular_name' => ('Second Slider'),
+        'add_new' => ('Add New Second Slider'),
+        'add_new_item' => ('Add New Second Slider'),
+        'edit_item' => ('Edit Second Slider'),
+        'new_item' => ('New Second Slider'),
+        'view_item' => ('View Second Slider'),
+        'not_found' => ('Sorry, we cound\'n find the Second Slider you are looking for.'),
+      ),
+      'menu_icon' => 'dashicons-format-gallery',
+      'public' => true,
+      'publicly_queryable' => true,
+      'exclude_from_search' => true,
+      'menu_position' => 5, 
+      'has_archive' => true,
+      'hierarchial' => true,
+      'show_ui' => true,
+      'capability_type' => 'post',
+      'rewrite' => array('slag' => 'second_slider'),
+      'supports' => array('title', 'thumbnail', 'editor', 'excerpt'),
+      )
+    );
+    add_theme_support('post-thumbnails');
+}
+
+add_action('init', 'custom_second_slider');
 
 function custom_service(){
   register_post_type ('service',
