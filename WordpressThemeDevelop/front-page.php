@@ -5,11 +5,11 @@
 
 
 get_header(); ?>
-
+<!-- First Slider Start Bellow  -->
 <section id="slider_area">
     <div class="slider">
       <?php 
-        query_posts('post_type=slider&post_status=publish&posts_per_page=3&order=ASC&paged='. get_query_var('post')); 
+        query_posts('post_type=first_slider&post_status=publish&posts_per_page=3&order=ASC&paged='. get_query_var('post')); 
 
         if(have_posts()) :
           while(have_posts()) : the_post(); 
@@ -24,10 +24,14 @@ get_header(); ?>
         ?>
     </div>
   </section>
-  <section id="slider_area">
+  <!-- First Slider End -->
+
+
+  <!-- Second Slider Start  -->
+  <!-- <section id="slider_area">
     <div id="owl_slider" class="owl-carousel">
       <?php 
-        query_posts('post_type=slider&post_status=publish&posts_per_page=3&order=ASC&paged='. get_query_var('post')); 
+        query_posts('post_type=second_slider&post_status=publish&posts_per_page=3&order=ASC&paged='. get_query_var('post')); 
 
         if(have_posts()) :
           while(have_posts()) : the_post(); 
@@ -40,7 +44,20 @@ get_header(); ?>
           endwhile;
           endif;
         ?>
-  </section>
+  </section> -->
+  <!-- Second Slider End  -->
+  <!-- Homepage Widget Start -->
+  <div id="homepage_post">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <?php dynamic_sidebar( 'home-1'); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Homepage Widget End -->
+
 
   <section id="service_area">
     <div class="container">

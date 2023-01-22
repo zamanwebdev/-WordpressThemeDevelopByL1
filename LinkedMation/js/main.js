@@ -5,6 +5,6 @@ jQuery(document).ready(function () {
   });
   jQuery("#owl_slider").owlCarousel({
   	autoplay:true,
-  	items:2,
+  	items:1,
   });
 });

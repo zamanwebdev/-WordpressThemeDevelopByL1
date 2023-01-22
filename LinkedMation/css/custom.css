@@ -18,6 +18,7 @@ body {
     font-size: 15px;
     line-height: 1.5em;
     color: var(--btextcolor);
+    width: 100%;
 
   }
 
@@ -81,24 +82,48 @@ input[type="submit"].submit:hover {
     padding: 10px 0;
     color: #fff;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: -25px;
+    
 
   }
   
-  #notice h2 {
+ #notice h2 {
     margin: 0;
-    padding-left: : 0;
-    width: 1224px;
+    padding-left: : 0px;
+    padding-right: 32px;
+    padding-top: 37px;
+    width: 946px;
+    height: 116px;
+    text-align: right;    
+}
 
-  }
+  
+
+#notice h2 a {
+    color: #fff;
+    background: #F29401;
+    border: 1px solid #F29401;
+    border-radius: 50px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#notice h2 a:hover{
+   text-decoration: none;
+   color: #F29401;
+   background: #112442;
+}
+
+
+
   #notice h2 marquee {
-      margin-left: -105px;
+      /*margin-left: -105px;*/
   }
   
   #header_area {
-    padding: 0px 0 15px;
-    box-shadow: 0 3px 10px #ddd;
-    background: var(--headerBackground);
+    /*padding: 0px 0 15px;*/
+    /*box-shadow: 0 3px 10px #ddd;*/
+    /*background: var(--headerBackground);*/
   }
   
   #header_area .col-md-9 ul {
@@ -281,7 +306,7 @@ input[type="submit"].submit:hover {
   Slider Area Styling
 ===========================================*/
 #slider_area{
-  margin: 25px 0;
+  /*margin: 25px 0;*/
 }
 #slider_area img{
   width: 100%;
@@ -355,7 +380,11 @@ input[type="submit"].submit:hover {
   margin-bottom: 0;
   line-height: 1em;
   /*border-left: 5px solid var(--pink);*/
-  padding-left: 10px;
+  padding-left: 0px;
+}
+.child_sidebar a {
+    text-decoration: none;
+    color: #ffff;
 }
 .child_sidebar input[type="search"] {
   background: #fff;

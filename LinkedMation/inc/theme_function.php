@@ -1,20 +1,42 @@
 <?php 
 
 function zaman_customizar_register($wp_customize){
+    
+    //Schedule Now Option in Header Area 
+    $wp_customize->add_section('Schedule_Now_Option', array(
+      'title' => __('Schedule Now Option', 'syedzaman'),
+      'description' => 'Description of Schedule Option'
+    ));
+    
+    
+    $wp_customize->add_setting('Schedule_Now', array(
+      'default' => 'Offer or Notice Text Write Here',
+    ));
+    $wp_customize-> add_control('Schedule_Now', array(
+      'label' => 'Schedule Now Link',
+      'description' => 'If need you can update your Schedule Now Link from here',
+      'setting' => 'Schedule_Now',
+      'section' => 'Schedule_Now_Option',
+    ));
+    
+
     //Offer and Notice Option in Header Area 
     $wp_customize->add_section('Offer_Notice_Option', array(
       'title' => __('Offer Notice Option', 'syedzaman'),
       'description' => 'description of Offer Notice Option'
     ));
+    
+    
     $wp_customize->add_setting('Offer_Notice', array(
       'default' => 'Offer or Notice Text Write Here',
     ));
     $wp_customize-> add_control('Offer_Notice', array(
-      'label' => 'Copyright Text',
+      'label' => 'Offer Text',
       'description' => 'If need you can update your copyright text from here',
       'setting' => 'Offer_Notice',
       'section' => 'Offer_Notice_Option',
     ));
+    
 
     // Theme Color
       $wp_customize-> add_section('zaman_colors', array(
@@ -109,7 +131,7 @@ function zaman_customizar_register($wp_customize){
     ));
 
     $wp_customize->add_setting('zaman_copyright_link', array(
-      'default' => '&copy; Copyright 2022 | Zaman',
+      'default' => '&copy; Copyright 2023 | Zaman',
     ));
     $wp_customize-> add_control('zaman_copyright_link', array(
       'label' => 'Copyright Web Link',
@@ -117,6 +139,8 @@ function zaman_customizar_register($wp_customize){
       'setting' => 'zaman_copyright_link',
       'section' => 'zaman_footer_option',
     ));
+
+    
 
     
       
@@ -172,7 +196,7 @@ function zaman_customizar_register($wp_customize){
 }
 add_action('customize_register', 'zaman_customizar_register');
 
-function ali_theme_color_cus(){
+function zaman_theme_color_cus(){
   ?>
   <style>
     :root{ --notice_background_color:<?php echo get_theme_mod('notice_background_color'); ?>}
@@ -187,4 +211,4 @@ function ali_theme_color_cus(){
   </style>
   <?php 
 }
-add_action('wp_head', 'ali_theme_color_cus');
+add_action('wp_head', 'zaman_theme_color_cus');
