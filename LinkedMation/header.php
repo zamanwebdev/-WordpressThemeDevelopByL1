@@ -10,6 +10,7 @@
     <meta charset="<?php bloginfo('charset')?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="p:domain_verify" content="a07686e451d63d8222bc0ae4f3757923"/>
    <?php wp_head( )?>
 </head>
 <body <?php body_class();?>>
@@ -19,7 +20,8 @@
         <div class="container">
           <div class="row">
           <div class="col-md-3">
-             <h2 style="text-align: left;">Linked<span style="color: #004AAD;">Mation</span></h2>
+             <!-- <h2 style="text-align: left;">Linked<span style="color: #004AAD;">Mation</span></h2> -->
+             <a href="<?php echo home_url(); ?>"><img src="<?php echo get_theme_mod('zaman_logo'); ?>" alt="Logo" class="logo"></a>
           </div>
             <div class="col-md-9">
             	<h2><a href="<?php echo get_theme_mod('Schedule_Now'); ?>" target="_blank"><?php echo get_theme_mod('Offer_Notice'); ?></a></h2>
