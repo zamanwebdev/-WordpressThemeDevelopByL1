@@ -4,10 +4,16 @@
 add_theme_support('title-tag');
 
 // Thumbnil Image Area
-add_theme_support( 'post-thumbnails', array('page', 'post', 'service') );
+add_theme_support( 'post-thumbnails', array('page', 'post', 'service',) );
 // add_image_size('slider', 1920, 100, true);
 add_image_size('service', 400, 200, true);
 add_image_size('post-thumbnails', 970, 350, true);
+
+function my_theme_setup(){
+  add_theme_support('post-thumbnails');
+  add_theme_support('post-formats',['aside ','gallery','image','audio','video']);
+}
+add_action('after_setup_theme','my_theme_setup');
 
 // Except to 40 Word
 function zaman_excerpt_more($more){
